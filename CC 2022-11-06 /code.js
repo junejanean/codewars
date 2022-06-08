@@ -1,28 +1,47 @@
-//In this simple assignment you are given a number and have to make it negative.
-// But maybe the number is already negative?
+//Let's play! You have to return which player won!
+// In case of a draw return Draw!.
 
 // Parameters
-// given a number
-// either positive, negative or zero
+// given a type - paper, rock or scissors
+// compare the two to see which one is the winner
 
 // Return
-// return a negative number if positive
-// if negative, return the same number
-// if zero, return zero
+// 7 different results
+// if rock and paper, paper wins
+// if scissors and rock, rock wins
+// if paper and scissors, scissors wins
+// if the same type, return "Draw!"
 
-// Examples
-// makeNegative(1);    // return -1
-// makeNegative(-5);   // return -5
-// makeNegative(0);    // return 0
-// makeNegative(0.12); // return -0.12
+// Examples (Input1, Input2 --> Output):
+// "scissors", "paper" --> "Player 1 won!"
+// "scissors", "rock" --> "Player 2 won!"
+// "paper", "paper" --> "Draw!"
 
 // Pseudo Code
 
-function makeNegative(num) {
-	if (num === 0 || num < 0) {
-		return num;
-	} else {
-		return -num;
+const rps = (p1, p2) => {
+	let result = null;
+	if (p1 === p2) {
+		result = 'Draw!';
 	}
-}
-makeNegative(-13);
+	if (p1 === 'scissors' && p2 === 'paper') {
+		result = 'Player 1 won!';
+	}
+	if (p1 === 'scissors' && p2 === 'rock') {
+		result = 'Player 2 won!';
+	}
+	if (p1 === 'paper' && p2 === 'rock') {
+		result = 'Player 1 won!';
+	}
+	if (p1 === 'paper' && p2 === 'scissors') {
+		result = 'Player 2 won!';
+	}
+	if (p1 === 'rock' && p2 === 'paper') {
+		result = 'Player 2 won!';
+	}
+	if (p1 === 'rock' && p2 === 'scissors') {
+		result = 'Player 1 won!';
+	}
+	return result;
+};
+rps('rock', 'scissors');
