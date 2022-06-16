@@ -1,18 +1,16 @@
-//Given a non-empty array of integers, return the result of multiplying the values together in order.
+//Code as fast as you can! You need to double the integer and return it.
 
 // Parameters
-// an array with integers
-// multiply each integer in their order
+// an integer
+//double it ( * 2)
 
 // Return
 // one integer
 
 // Examples
-// [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 
 // Pseudo Code
 
-function grow(x) {
-	return x.reduce((a, b) => a * b);
+function doubleInteger(i) {
+	return i * 2;
 }
-grow([4, 1, 1, 1, 4]);
