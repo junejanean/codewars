@@ -1,3 +1,4 @@
+// #1
 //  Complete the function that returns the color of the given square
 // on a normal, 8x8 chess board:
 
@@ -40,3 +41,33 @@ for (var r = 0; r < size; r++) {
 	board += '\n';
 }
 console.log(board);
+
+// #2
+// Write a function that returns both the minimum and maximum number
+// of the given list/array.
+
+// Parameters
+// list or array of numbers
+// always at least one integer
+
+// Return
+// [min, max] from the array
+
+// Examples
+// [1,2,3,4,5] --> [1,5]
+// [2334454,5] --> [5, 2334454]
+// [1]         --> [1, 1]
+
+// 1st solution
+function minMax(arr) {
+	let min = Math.min(...arr);
+	let max = Math.max(...arr);
+	return [min, max];
+}
+minMax([1, 2, 3, 4, 5]);
+
+// 2nd solution
+function minMax(arr) {
+	return [Math.min(...arr), Math.max(...arr)];
+}
+minMax([1, 2, 3, 4, 5]);
