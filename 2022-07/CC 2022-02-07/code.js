@@ -22,18 +22,16 @@
 
 // Pseudo Code
 // Walk has to be for 10 minutes
-// if walk.length === 10 // true
-//
-// count the length of the array
-// if 10 === true
-// or if there are more than 5 'n'
+// create empty variables ns & ew
+// if walk.length === 10, then
+// loop through to count n, s, e, w
+// add 1 or minus 1 for n or e
+// true if ns and ew === 0
 // else false
 
 function isValidWalk(walk) {
 	ns = 0;
 	ew = 0;
-	let walkLength = walk.length;
-	let n = [];
 	if (walk.length === 10) {
 		walk.forEach((i) => {
 			if (i === 'n') ns += 1;
@@ -43,12 +41,6 @@ function isValidWalk(walk) {
 		});
 	} else return false;
 	return ns === 0 && ew === 0;
-
-	if (walkLength === 10 && n.length <= 5) {
-		return 'should return true';
-	} else {
-		return 'should return false';
-	}
 }
 isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']);
 isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']);
